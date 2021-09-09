@@ -4,11 +4,11 @@
           <div class="row">
             <div class="col-lg-7 col-md-12 col-sm-12 col-xs-12">
               <div class="contents">
-                <h2 class="head-title">Com a Fusion<br>Landing Page Template</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem repellendus quasi fuga nesciunt dolorum nulla magnam veniam sapiente, fugiat! fuga nesciunt dolorum nulla magnam veniam sapiente, fugiat!</p>
+                <h2 class="head-title">Sistema JLS<br>Python + Django Framework</h2>
+                <p>Sistema desenvolvido na linguagem Python com Django Framework. Totalmente configurável e escalável.</p>
                 <div class="header-button">
                   <a href="#" class="btn btn-common">Saiba mais</i></a>
-                  <a href="#" class="btn btn-border video-popup">Entre em contato</i></a>
+                  <a href="#contact" class="btn btn-border video-popup">Entre em contato</i></a>
                 </div>
               </div>
             </div>
@@ -20,5 +20,15 @@
           </div>
         </div>
       </div>
+    <div class="container">
+        {% if messages %}
+            {% for m in messages %}
+                <div class="alert alert-{{ m.tags }}">
+                    <button class="close" data-dismiss="alert"></button>
+                    <stron>{{ m }}</stron>
+                </div>
+            {% endfor %}
+        {% endif %}
+    </div>
  </header>
     <!-- Header Area wrapper End -->
